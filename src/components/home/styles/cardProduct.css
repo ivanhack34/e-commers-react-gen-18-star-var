@@ -34,6 +34,7 @@
 
 .product__title{
     font-weight: 600;
+    height: 58px;
     margin-bottom: 10px;
     grid-column: span 2;
 }
