@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './styles/cardProduct.css'
 
 const CardProduct = ({product}) => {
 
@@ -16,7 +17,7 @@ const CardProduct = ({product}) => {
   return (
     <article onClick={handleNavigation} className='product'>
       <header className='product__header'>
-        <img src={product.productImgs[0]} alt="" />
+        <img className='product__img' src={product.productImgs[0]} alt="" />
       </header>
       <div className="product__body">
         <h3 className="product__title">{product.title}</h3>

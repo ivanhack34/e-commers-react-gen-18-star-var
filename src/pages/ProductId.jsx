@@ -22,7 +22,7 @@ const ProductId = () => {
   return (
     <div>
       <ProductInfo product={product}/>
-      <SimilarProducts productCategory={product?.category}/>
+      <SimilarProducts product={product}/>
     </div>
   )
 }

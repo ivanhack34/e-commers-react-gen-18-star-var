@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllProducts } from '../store/slices/products.slice'
 import CardProduct from '../components/home/CardProduct'
+import './styles/home.css'
 
 const Home = () => {
 
@@ -13,8 +14,6 @@ const Home = () => {
    dispatch(getAllProducts())
   }, [])
   
-
-  console.log(products);
 
   return (
     <main className='home'>
