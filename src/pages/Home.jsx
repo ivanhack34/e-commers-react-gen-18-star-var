@@ -4,13 +4,14 @@ import { getAllProducts } from '../store/slices/products.slice'
 import CardProduct from '../components/home/CardProduct'
 import './styles/home.css'
 import InputSearch from '../components/home/InputSearch'
+import axios from 'axios'
 
 const Home = () => {
   
   const [inputText, setInputText] = useState('')
   const [filterByText, setFilterByText] = useState()
   
-  console.log(inputText)
+  // console.log(inputText)
 
   const products = useSelector(state => state.products)
 
@@ -20,7 +21,7 @@ const Home = () => {
    dispatch(getAllProducts())
   }, [])
 
-  console.log(products);
+  // console.log(products);
 
   useEffect(() => {
     if(inputText !== '' && products){
@@ -29,9 +30,30 @@ const Home = () => {
     }else{
       setFilterByText(products)
     }
-  }, [inputText])
+  }, [inputText, products])
   
-  console.log(filterByText)
+  // console.log(filterByText)
+
+  useEffect(() => {
+    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
+
+    //Cada quien hace su propia cuenta
+
+    //Crea tu usuario:
+    const data = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      phone: '',
+      role: ''
+    }
+
+    axios.post(URL, data)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err.response.data))
+  }, [])
+
 
   return (
     <main className='home'>
