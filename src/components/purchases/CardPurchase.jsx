@@ -1,11 +1,13 @@
 import React from 'react'
+import './styles/cardpurchases.css'
+
 
 const CardPurchase = ({purchase}) => {
 
     console.log(purchase)
 
   return (
-    <article style={{border: '1px solid blueviolet', marginButton: '20px'}}>
+    <article className='purchases-item'>
         <header>{purchase.updatedAt}</header>
         <div>
             {
@@ -13,7 +15,7 @@ const CardPurchase = ({purchase}) => {
                     <section key={product.id}>
                         <h3>{product.title}</h3>
                         <span>{product.productsInCart.quantity}</span>
-                        <div>${product.price}</div>
+                        <div className='purchases__price'>${product.price}</div>
                     </section>
                 ))
             }
