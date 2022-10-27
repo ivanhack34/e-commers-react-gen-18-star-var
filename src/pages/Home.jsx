@@ -34,25 +34,25 @@ const Home = () => {
   
   // console.log(filterByText)
 
-  useEffect(() => {
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
+  // useEffect(() => {
+  //   const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
 
-    //Cada quien hace su propia cuenta
+  //   //Cada quien hace su propia cuenta
 
-    //Crea tu usuario:
-    const data = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      phone: '',
-      role: ''
-    }
+  //   //Crea tu usuario:
+  //   const data = {
+  //     firstName: '',
+  //     lastName: '',
+  //     email: '',
+  //     password: '',
+  //     phone: '',
+  //     role: ''
+  //   }
 
-    axios.post(URL, data)
-      .then(res => console.log(res.data))
-      .catch(err => console.log(err.response.data))
-  }, [])
+  //   axios.post(URL, data)
+  //     .then(res => console.log(res.data))
+  //     .catch(err => console.log(err.response.data))
+  // }, [])
 
 
   return (

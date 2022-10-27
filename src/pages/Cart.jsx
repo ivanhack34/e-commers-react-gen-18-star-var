@@ -49,7 +49,13 @@ const Cart = () => {
 
   return (
     <div className='cart'>
-      <div className="cart__container">
+      {
+      cart?.products.length === 0 || cart === null
+      ?
+      <h1>Hola</h1>
+      :
+      <section>
+        <div className="cart__container">
         {
           cart?.products.map(product => (
             <CartProduct
@@ -58,9 +64,13 @@ const Cart = () => {
             />
           ))
         }
-      </div>
-      <h2>Total: ${total}</h2>
-      <button onClick={handlePurchase} style={{fontSize: '30px'}}>Buy Now</button>
+        </div>
+        <h2>Total: ${total}</h2>
+        <button onClick={handlePurchase} style={{fontSize: '30px'}}>Buy Now</button>    
+      </section>
+      }
+      
+
     </div>
   )
 }

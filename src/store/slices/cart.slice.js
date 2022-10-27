@@ -18,5 +18,5 @@ export const getAllProductsCart = () => (dispatch) => {
     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
     return axios.get(URL, getConfig())
         .then(res => dispatch(setCartGlobal(res.data.data.cart)))
-        .catch(err => console.log(err))
+        .catch(err => console.log(err.response))
 }

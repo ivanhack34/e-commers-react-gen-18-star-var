@@ -27,7 +27,7 @@ const CardProduct = ({product}) => {
         console.log(res.data)
         dispatch(getAllProductsCart())
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err.response.data))
   }
 
   return (
