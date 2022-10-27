@@ -4,13 +4,9 @@ import { getAllProducts } from '../store/slices/products.slice'
 import CardProduct from '../components/home/CardProduct'
 import './styles/home.css'
 import InputSearch from '../components/home/InputSearch'
-<<<<<<< HEAD
 import FilterCategory from '../components/home/FilterCategory'
 import FilterPrice from '../components/home/FilterPrice'
 import OrderByPrice from '../components/home/OrderByPrice'
-=======
-import axios from 'axios'
->>>>>>> 0cd24f6cf202bf1732e67fe4cebcad0f109ad41e
 
 const Home = () => {
   
@@ -21,11 +17,7 @@ const Home = () => {
     to: Infinity
   })
   
-<<<<<<< HEAD
   console.log(filterByPrice)
-=======
-  // console.log(inputText)
->>>>>>> 0cd24f6cf202bf1732e67fe4cebcad0f109ad41e
 
   const products = useSelector(state => state.products)
 
@@ -35,7 +27,7 @@ const Home = () => {
    dispatch(getAllProducts())
   }, [])
 
-  // console.log(products);
+  console.log(products);
 
   useEffect(() => {
     if(inputText !== '' && products){
@@ -44,37 +36,12 @@ const Home = () => {
     }else{
       setFilterByText(products)
     }
-  }, [inputText, products])
+  }, [inputText])
   
-<<<<<<< HEAD
 
 const callBackFilterPrice = product => {
   return product.price >= filterByPrice.from && +product.price <= filterByPrice.to
 }
-=======
-  // console.log(filterByText)
-
-  useEffect(() => {
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
-
-    //Cada quien hace su propia cuenta
-
-    //Crea tu usuario:
-    const data = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      phone: '',
-      role: ''
-    }
-
-    axios.post(URL, data)
-      .then(res => console.log(res.data))
-      .catch(err => console.log(err.response.data))
-  }, [])
-
->>>>>>> 0cd24f6cf202bf1732e67fe4cebcad0f109ad41e
 
   return (
     <main className='home'>
