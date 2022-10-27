@@ -13,6 +13,8 @@ const FilterPrice = ({setFilterByPrice}) => {
         setFilterByPrice(obj);
     }
 
+    /** */
+
   return (
         <form onSubmit={handleSubmit}>
             <h3>Price</h3>
