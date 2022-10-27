@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles/inputSearch.css'
 
+
 const InputSearch = ({inputText,setInputText}) => {
 
     const handleChange = e =>{
@@ -8,6 +9,7 @@ const InputSearch = ({inputText,setInputText}) => {
     }
 
   return (
+
     <div className="inputSearch">
       
       <div className="checkSearch">
@@ -20,6 +22,7 @@ const InputSearch = ({inputText,setInputText}) => {
       <input value={inputText} onChange={handleChange} type="text" placeholder='Search products'/>
       </div>
     </div>
+
   )
 }
 

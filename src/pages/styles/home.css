@@ -1,3 +1,4 @@
+
 .home{
     display: grid;
     grid-template-columns: 30% 70%;
@@ -9,6 +10,9 @@
     grid-column: 1 / 1;
     /* background-color: cadetblue; */
 }
+
+
+
 .home__container{
     /* background-color: antiquewhite; */
     grid-column: 2 / 2;
@@ -23,6 +27,7 @@
     margin-right: auto;
 }
 
+
 @media (max-width:470px){
     .searchInput{
         grid-column: 1 / -1;
@@ -31,4 +36,5 @@
     .home__container{
         grid-column: 1 / -1;
     }
+
 }
