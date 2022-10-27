@@ -1,0 +1,15 @@
+.filter-price__btn,
+.order__btn{
+    background-color: var(--bg-colot-red);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.filter-price__input{
+    padding: 5px 20px;
+    box-shadow: -1px 2px 5px #0003;
+    margin: 5px;
+}
+
