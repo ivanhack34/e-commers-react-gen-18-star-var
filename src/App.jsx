@@ -12,17 +12,17 @@ import Purchases from './pages/Purchases'
 
 function App() {
 
-  /*useEffect(() => {
+  useEffect(() => {
     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'
 
     //Cada quien hace su propia cuenta
 
     //Usuario de Ivan Polanco
     const data = {
-      firstName: 'Ivan',
-      lastName: 'pol',
-      email: 'ivanpolanco@gmail.com',
-      password: 'pass1234',
+      firstName: 'Fernando',
+      lastName: 'Mendoza',
+      email: 'fermendoza95@gmail.com',
+      password: 'pass1234567',
       phone: '1234567891',
       role: 'admin'
     }
@@ -30,7 +30,7 @@ function App() {
     axios.post(URL, data)
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
-  }, [])*/
+  }, [])
 
   
 

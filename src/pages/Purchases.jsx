@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import CardPurchase from '../components/purchases/CardPurchase'
 import getConfig from '../utils/getConfig'
+import './styles/purchases.css'
+
 
 const Purchases = () => {
 
