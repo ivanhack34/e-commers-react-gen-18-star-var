@@ -1,0 +1,76 @@
+.inputSearch{
+    width: 100%;
+    margin: auto;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    position: relative;
+}
+.search{
+    z-index: 200;
+    position: absolute;
+    left: 0;
+    padding: 6px;
+    background-color: purple;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    height: 30px;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    border: 1px solid purple;
+    line-height: 1em;
+
+    padding: 5px 20px;
+    box-shadow: -1px 2px 5px #0003;
+    margin: 5px;
+}
+.search label i {
+    cursor: pointer;
+}
+.search:hover{
+    transform: scale(0.85);
+    transition: transform 500ms ease;
+}
+
+
+.input_container{
+    padding: 10px 20px;
+    box-shadow: -1px 2px 5px #0003;
+}
+
+input[type="text"]{
+    position: absolute;
+    left: 0;
+    height: 30px;
+    aspect-ratio: 1;
+    border-radius: 5px;
+
+    padding: 5px 20px;
+    box-shadow: -1px 2px 5px #0003;
+    margin: 5px;
+
+    transition-delay: 3s;
+    opacity: 0;
+    transition: 500ms ease;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    display: none;
+    background-color: aquamarine;
+}
+input[type="checkbox"]:checked ~ input[type="text"] {
+    width: 80%;
+    transition: 1s ease-in-out;
+    transition-delay: 100ms;
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ .search{
+    left: calc(80% - 60px);
+    transition: 1s ease-in-out;
+    /* left: 40%; */
+}
