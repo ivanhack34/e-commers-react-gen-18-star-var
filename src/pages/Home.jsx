@@ -45,10 +45,17 @@ const callBackFilterPrice = product => {
 
   return (
     <main className='home'>
-      <InputSearch inputText={inputText}  setInputText={setInputText}/>
+
+      <div className="searchInput">
+        <InputSearch inputText={inputText}  setInputText={setInputText}/>
+      </div> 
+      <div className="searchInput">
+        <InputSearch inputText={inputText}  setInputText={setInputText}/>
+      </div> 
       <FilterPrice setFilterByPrice={setFilterByPrice}/>
       <FilterCategory />
       <OrderByPrice />
+
       <div className="home__container">
         {
           filterByText?.filter(callBackFilterPrice).map(product => (
