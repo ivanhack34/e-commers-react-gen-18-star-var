@@ -57,7 +57,9 @@ const Home = () => {
 
   return (
     <main className='home'>
-      <InputSearch inputText={inputText}  setInputText={setInputText}/>
+      <div className="searchInput">
+        <InputSearch inputText={inputText}  setInputText={setInputText}/>
+      </div> 
       <div className="home__container">
         {
           filterByText?.map(product => (

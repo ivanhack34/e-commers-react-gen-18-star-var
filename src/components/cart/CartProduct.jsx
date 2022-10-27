@@ -26,7 +26,9 @@ const CartProduct = ({product}) => {
             <li><span>Price</span>{product.price}</li>
             <li><span>Quantity</span>{product.productsInCart.quantity}</li>
         </ul>
-        <button onClick={handleDelete} className='card-p__btn'><i className='cart-p__icon fa-regular fa-trash-can'></i></button>
+        <button onClick={handleDelete} className='card-p__btn'>
+            <i className='cart-p__icon fa-regular fa-trash-can'></i>
+        </button>
     </article>
   )
 }
